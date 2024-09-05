@@ -1,10 +1,10 @@
-@import './reset.css';
-@import './header.css';
-@import './hero.css';
-@import './about-me.css';
-@import './benefits.css';
-@import './projects.css';
-@import './faq.css';
-@import './covers.css';
-@import './reviews.css';
-@import './work-together.css';
+
+@import './header.css'; /* Volodymyr Tymoshyshyn */
+@import './hero.css'; /* Daria Kotets */
+@import './about-me.css'; /* Skorohliad Yelyzaveta */
+@import './benefits.css'; /* Svitlana Riabtseva */
+@import './projects.css'; /* Oleksandr Pinchuk */
+@import './faq.css'; /* Vlad Tarasov */
+@import './covers.css'; /* Skrypnyk Slava */
+@import './reviews.css'; /* Eugene Soshin */
+@import './work-together.css'; /* Kristina Humeniuk */

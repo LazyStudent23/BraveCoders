@@ -1,9 +1,9 @@
-import './js/header.js';
-import './js/hero.js';
-import './js/about-me.js';
-import './js/benefits.js';
-import './js/projects.js';
-import './js/faq.js';
-import './js/covers.js';
-import './js/reviews.js';
-import './js/work-together.js';
+import './js/header.js'; // Volodymyr Tymoshyshyn
+import './js/hero.js'; // Daria Kotets
+import './js/about-me.js'; // Skorohliad Yelyzaveta
+import './js/benefits.js'; // Svitlana Riabtseva
+import './js/projects.js'; // Oleksandr Pinchuk
+import './js/faq.js'; // Vlad Tarasov
+import './js/covers.js'; // Skrypnyk Slava
+import './js/reviews.js'; // Eugene Soshin
+import './js/work-together.js'; // Kristina Humeniuk
