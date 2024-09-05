@@ -21,6 +21,7 @@
     "axios": "^1.7.2",
     "basiclightbox": "^5.0.4",
     "modern-normalize": "^3.0.0",
+    "normalize.css": "^8.0.1",
     "swiper": "^11.1.12",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"
