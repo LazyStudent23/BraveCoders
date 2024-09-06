@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/TechVibe/",
+    "build": "vite build --base=/BraveCoders/",
     "preview": "vite preview"
   },
   "devDependencies": {
