@@ -1,0 +1,70 @@
+/* ------------Mobile Styles Section ------------ */
+.review-section {
+  height: 100%;
+}
+
+.review-section-card-cover {
+  display: flex;
+  flex-basis: calc((100% - 24px) / 4);
+}
+
+.review-section-header {
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+.review-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+
+  height: 100%;
+  margin-bottom: 32px;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.review-content {
+  font-weight: 500;
+  color: rgba(250, 250, 250, 0.6);
+  height: 100%;
+}
+
+.swipe-button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+}
+
+.swipe-btn {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  background-color: transparent;
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+}
+
+/* ------------Tablet Styles Section ------------ */
+
+@media screen and (min-width: 768px) {
+  .swipe-button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
