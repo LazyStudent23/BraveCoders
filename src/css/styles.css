@@ -16,6 +16,7 @@ body {
   letter-spacing: -0.02em;
   color: #fafafa;
   background-color: #1c1d20;
+  margin: 0;
 }
 .accent-text {
   color: #ff7f08;
@@ -34,7 +35,7 @@ body {
 }
 .container {
   max-width: 375px;
-  /* width: 100%; */
+  width: 100%;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
