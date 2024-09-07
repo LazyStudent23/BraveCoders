@@ -2,11 +2,13 @@
 @import './header.css'; /* Volodymyr Tymoshyshyn */
 @import './hero.css'; /* Daria Kotets */
 @import './about-me.css'; /* Skorohliad Yelyzaveta */
+@import './benefits.css'; /* Svitlana Riabtseva */
+@import './projects.css'; /*Oleksandr Pinchuk */
 @import './faq.css'; /* Vlad Tarasov */
 @import './covers.css'; /* Skrypnyk Slava */
 @import './reviews.css'; /* Eugene Soshin */
 @import './work-together.css'; /* Kristina Humeniuk */
-@import './work-together.css'; /* Kristina Humeniuk */
+
 
 body {
   font-family: 'Inter Tight', sans-serif;

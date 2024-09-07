@@ -1,0 +1,44 @@
+ul > li {
+    color: #1C1D20;
+}
+.project-container {
+    max-width: 343px;
+}
+.text-project-info {
+    background-color: #fafafa;
+    padding: 32px;
+}
+.tech-skills {
+    margin-bottom: 96px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 6px;
+
+}
+.tech-skills > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 18px;
+    font-weight: 600;
+    border: 2px solid rgb(28, 29, 32, 0.2);
+    border-radius: 100px;
+    height: 45px;
+}
+.secondary-title {
+    font-size: 24px;
+    margin-bottom: 32px;
+    line-height: 1.28;
+        letter-spacing: -0.9px;
+}
+.project-btn {
+    border: none;
+    cursor: pointer;
+    background-color: #ff7f08;
+    color: #fafafa;
+    width: 141px;
+    height: 45px;
+    border-radius: 100px;
+    font-size: 16px;
+}
