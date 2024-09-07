@@ -25,6 +25,7 @@ const renderReviewTemplate = () => {
       .join('');
     reviewCardCover.insertAdjacentHTML('beforeend', reviewTemplate);
   });
+  console.log('hello');
 };
 
 renderReviewTemplate();
