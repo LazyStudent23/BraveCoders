@@ -15,14 +15,18 @@ body {
 
 /* Базовый стиль для мобильных устройств */
 .marquee {
-  background-image: url("../img/background-cover.jpg");
+  background-image: url('../img/background-cover.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
   position: absolute;
   right: -800px;
   left: 0;
   overflow: hidden;
-  font-family: "Pridi", sans-serif;
+  font-family: 'Pridi', sans-serif;
   font-weight: 600;
-  font-size: 16px; 
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -46,30 +50,29 @@ body {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-play-state: paused; 
+  animation-play-state: paused;
 }
 
 .marquee__line.animate {
-  animation-play-state: running; 
+  animation-play-state: running;
 }
 
 @keyframes marqueeLine {
   from {
     transform: translateX(-20%);
   }
-  
+
   to {
     transform: translateX(-180%);
   }
 }
-
 
 /* --------- Медиазапросы для планшетов и десктопов --------- */
 
 /* Для планшетов (768px и выше) */
 @media (min-width: 768px) {
   .marquee {
-    font-size: 24px; 
+    font-size: 24px;
   }
   .marquee__line {
     width: calc(100% / 5);
@@ -83,6 +86,6 @@ body {
   }
 
   .marquee__inner {
-    height: 100vh; 
+    height: 100vh;
   }
 }
