@@ -74,7 +74,7 @@
 
 .hard-skills {
     display: flex;
-    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .skill-wrap {
@@ -85,6 +85,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.skills-swiper-button-next {
+    border: none;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    stroke: #3B3B3B;
 }
 
 /* ================ TABLET ================= */
