@@ -1,7 +1,8 @@
 
-ul > li.project-container {
+.project-container {
     color: #1C1D20;
-    
+    display: flex;
+    gap: 20px;
 }
 .section-container {
     max-width: 343px;
@@ -44,9 +45,7 @@ ul > li.project-container {
     border-radius: 100px;
     font-size: 16px;
 }
-.arrow-contrainer {
-    display: flex;
-}
+
 .arrow {
     width: 52px;
     height: 52px;
