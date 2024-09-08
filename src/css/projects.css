@@ -42,3 +42,7 @@ ul > li {
     border-radius: 100px;
     font-size: 16px;
 }
+img {
+    display: block;
+    width: 100%;
+}
