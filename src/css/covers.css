@@ -46,12 +46,13 @@ body {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-play-state: paused; /* Изначально анимация остановлена */
+  animation-play-state: paused; 
 }
 
 .marquee__line.animate {
-  animation-play-state: running; /* Запуск анимации, когда добавляется класс */
+  animation-play-state: running; 
 }
+
 @keyframes marqueeLine {
   from {
     transform: translateX(-20%);
@@ -61,6 +62,7 @@ body {
     transform: translateX(-180%);
   }
 }
+
 
 /* --------- Медиазапросы для планшетов и десктопов --------- */
 

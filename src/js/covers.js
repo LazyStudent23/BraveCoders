@@ -1,20 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const marqueeline = document.querySelectorAll('.marquee__line');
-  const marqueeSection = document.getElementById('covers');
+document.addEventListener("DOMContentLoaded", () => {
+  const coversSection = document.querySelector('.covers-section');
+  const marqueeLines = document.querySelectorAll('.marquee__line');
 
-  const observer = new IntersectionObserver((entries) => {
+  const onIntersection = (entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        marqueeline.forEach(item => {
-          item.classList.add("animate"); // Запуск анимации
-        });
+        marqueeLines.forEach(line => line.classList.add('animate'));
       } else {
-        marqueeline.forEach(item => {
-          item.classList.remove("animate"); // Пауза анимации
-        });
+        marqueeLines.forEach(line => line.classList.remove('animate'));
       }
     });
+  };
+
+  const observer = new IntersectionObserver(onIntersection, {
+    threshold: 0.5 
   });
 
-  observer.observe(marqueeSection);
+  observer.observe(coversSection);
 });
