@@ -1,10 +1,5 @@
-export const fetchReviews = async () => {
-  const BaseUrl = 'https://portfolio-js.b.goit.study/api/reviews';
+import axios from 'axios';
 
-  return await fetch(`${BaseUrl}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  });
+export const getReviews = async () => {
+  return await axios.get('https://portfolio-js.b.goit.study/api/reviews');
 };
