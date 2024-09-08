@@ -1,4 +1,4 @@
-.FAQ {
+.faq {
     font-family: Inter Tight,sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -22,6 +22,7 @@
 }
 
 .accordion-content {
+    transition-duration: 500ms;
     max-width: 289px;
     width: 100%
 }
@@ -78,8 +79,8 @@
 .accordion-content {
     max-height: 0;
     opacity: 0;
-    overflow: hidden;
     transition: max-height .5s ease-in-out,opacity .5s ease-in-out;
+    overflow: hidden;
     max-width: 343px;
     width: 100%
 }
@@ -114,9 +115,7 @@
 
 }
 
-.btn-svg-opn:hover svg {
-    stroke: #2d2e30; 
-}
+
 
 @media screen and (min-width: 768px) {
     .section-faq-container {
