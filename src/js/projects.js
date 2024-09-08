@@ -7,8 +7,8 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 100,
     modules: [Keyboard, Navigation],
     navigation: {
-        nextEl: '.right-arrow',
-        prevEl: '.left-arrow',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     mousewheel: true,
     keyboard: true,
