@@ -1,3 +1,9 @@
+.hero-container{
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
 
 .hero-section {
     background-repeat: no-repeat;
@@ -34,9 +40,14 @@
         /* flex-wrap: wrap; */
         flex-direction: row;
         gap: 4px;
+        justify-content: flex-end;
 }
 
 .hero-contacts-item {}
+
+.hero-contacts-link:hover{
+    border: 1px solid #fafafa;
+}
 
 .hero-contacts-link {
     font-family: "Inter Tight", sans-serif;
@@ -86,6 +97,7 @@
     .hero-title{
         max-width: 1084px;
         margin-bottom: 153px;
+        
 
     }
 
