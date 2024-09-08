@@ -1,27 +1,12 @@
-body {
-  margin: 0;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Стили для контента */
-.content {
-  position: relative;
-}
-
-/* Базовый стиль для мобильных устройств */
+/* Cтиль для мобильных устройств */
 .marquee {
   background-image: url('../img/background-cover.jpg');
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
   background-attachment: fixed;
-  position: absolute;
-  right: -800px;
+  position: relative;
   left: 0;
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
@@ -44,7 +29,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 4);
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 5s;
@@ -67,25 +51,20 @@ body {
   }
 }
 
-/* --------- Медиазапросы для планшетов и десктопов --------- */
-
-/* Для планшетов (768px и выше) */
+/* (768px и выше) */
 @media (min-width: 768px) {
   .marquee {
     font-size: 24px;
   }
-  .marquee__line {
-    width: calc(100% / 5);
-  }
 }
 
-/* Для десктопов (1440px и выше) */
+/* (1440px и выше) */
 @media (min-width: 1440px) {
   .marquee {
     font-size: 34px;
   }
 
   .marquee__inner {
-    height: 100vh;
+    height: 40vh;
   }
 }
