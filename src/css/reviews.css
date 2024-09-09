@@ -1,12 +1,10 @@
 /* ------------Mobile Styles Section ------------ */
 .review-section {
-  width: 344px;
   height: 100%;
 }
 
-.review-card-cover {
+.review-card-list {
   display: flex;
-  overflow: hidden;
 }
 
 .review-section-header {
@@ -106,5 +104,4 @@
     width: 322px;
     height: 100%;
   }
-
 }
