@@ -32,19 +32,9 @@
   margin-bottom: 32px;
 }
 
-.review-section-card:nth-child(n + 2) {
-  display: none;
-}
-
-.review-card-avatar {
-  border-radius: 10px;
-  margin-bottom: 32px;
-}
-
 .reviewer-name {
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 8px;
 }
 
 .review-content {
@@ -119,18 +109,4 @@
     height: 100%;
   }
 
-  .review-section-card:nth-child(n + 3) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border: 1px solid rgba(250, 250, 250, 0.2);
-    border-radius: 20px;
-    padding: 32px 24px;
-    height: 100%;
-    margin-bottom: 32px;
-  }
-
-  .review-section-card:nth-child(n + 5) {
-    display: none;
-  }
 }
