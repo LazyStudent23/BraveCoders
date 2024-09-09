@@ -52,6 +52,8 @@
 
 .icon {
   border-radius: 10px;
+  width: 48px;
+  height: 48px;
 }
 
 h3 {
