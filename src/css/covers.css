@@ -19,7 +19,6 @@
   margin: 50px 0;
   display: flex;
   transform: rotate(16deg);
-  flex-wrap: wrap;
 }
 
 .marquee__line {
