@@ -1,34 +1,21 @@
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
+// Обработчик для аккордеона
+document.querySelectorAll('.accordion-container').forEach(container => {
+  container.addEventListener('click', function () {
+      const panel = this.nextElementSibling;
 
-new Accordion('.scroll-to-read', {
-  duration: 400,
-  elementClass: 'accordion-item',
-  triggerClass: 'scroll-button',
-  panelClass: 'ac-panel',
-  //   activeClass: 'el-name',
-});
+      // Закрыть все панели кроме текущей
+      document.querySelectorAll('.ac-panel').forEach(p => {
+          if (p !== panel) {
+              p.classList.remove('active');
+              p.previousElementSibling.querySelector('svg').classList.remove('rotate');
+          }
+      });
 
-new Swiper('.hard-skills', {
-  speed: 400,
-  spaceBetween: 100,
-  autoHeight: true,
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    1440: {
-      slidesPerView: 6,
-    },
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-  navigation: {
-    nextEl: '.skills-swiper-button-next',
-  },
+      // Открыть/закрыть текущую панель
+      panel.classList.toggle('active');
+
+      // Повернуть стрелку
+      const svg = this.querySelector('svg');
+      svg.classList.toggle('rotate');
+  });
 });
