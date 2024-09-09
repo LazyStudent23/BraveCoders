@@ -16,8 +16,8 @@
     text-transform: uppercase;
 }
 
-.red-span {
-    color: #ED3B44;
+.accent-color {
+    background-color: #ff7f08;
 }
 
 .grey-span {
@@ -100,6 +100,7 @@
 }
 
 /* Swiper стили */
+
 .hard-skills {
     display: flex;
     flex-shrink: 0;
@@ -136,6 +137,11 @@
 
     .text-paddings {
         margin-bottom: 16px;
+    }
+
+    .skill-wrap {
+        width: 200px;
+        height: 200px;
     }
 }
 
