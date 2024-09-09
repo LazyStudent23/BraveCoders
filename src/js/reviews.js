@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { getReviews } from './portfolio-reviews-api.js';
 
 import Swiper from 'swiper';
@@ -9,6 +10,14 @@ const reviewCardList = document.querySelector('.review-card-list');
 
 const createReviewTemplate = reviewInfo => {
   return `<li class="swiper-slide review-section-card">
+=======
+import { fetchReviews } from './portfolio-reviews-api.js';
+
+const reviewCardCover = document.querySelector('.review-card-cover');
+
+const createReviewTemplate = reviewInfo => {
+  return `<div class="review-section-card">
+>>>>>>> 606914f (rebase from main 2)
       <img
         src="${reviewInfo.avatar_url}"
         class="review-card-avatar"
@@ -18,6 +27,7 @@ const createReviewTemplate = reviewInfo => {
       />
       <p class="reviewer-name">${reviewInfo.author}</p>
       <p class="review-content">${reviewInfo.review}</p>
+<<<<<<< HEAD
     </li>`;
 };
 
@@ -25,10 +35,19 @@ const renderReviewTemplate = async () => {
   try {
     const response = await getReviews();
     const reviewsTemplate = response.data
+=======
+    </div>`;
+};
+
+const renderReviewTemplate = () => {
+  fetchReviews().then(data => {
+    const reviewTemplate = data
+>>>>>>> 606914f (rebase from main 2)
       .map(reviewItem => {
         return createReviewTemplate(reviewItem);
       })
       .join('');
+<<<<<<< HEAD
 
     reviewCardList.insertAdjacentHTML('afterbegin', reviewsTemplate);
     swiper.update();
@@ -65,3 +84,10 @@ const swiper = new Swiper('.review-swiper', {
     nextEl: '.swiper-button-next',
   },
 });
+=======
+    reviewCardCover.insertAdjacentHTML('beforeend', reviewTemplate);
+  });
+};
+
+renderReviewTemplate();
+>>>>>>> 606914f (rebase from main 2)
