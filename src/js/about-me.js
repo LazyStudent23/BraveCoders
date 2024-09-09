@@ -40,7 +40,7 @@ import 'accordion-js/dist/accordion.min.css';
 
   acc.open(0);
 
-const swiper = new Swiper('.swapper-of-skills', {
+new Swiper('.swapper-of-skills', {
   speed: 400,
   slidesPerView: 2,
   spaceBetween: 0,
