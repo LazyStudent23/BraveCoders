@@ -1,0 +1,69 @@
+
+/* Cтиль для мобильных устройств */
+.marquee {
+  background-image: url('../img/background-cover.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  position: relative;
+  left: 0;
+  overflow: hidden;
+  font-family: 'Pridi', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.marquee__inner {
+  margin: 50px 0;
+  display: flex;
+  transform: rotate(16deg);
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin-right: 40px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.marquee__line.animate {
+  animation-play-state: running;
+}
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+
+/* (768px и выше) */
+@media (min-width: 768px) {
+  .marquee {
+    font-size: 24px;
+  }
+}
+
+/* (1440px и выше) */
+@media (min-width: 1440px) {
+  .marquee {
+    font-size: 34px;
+  }
+
+  .marquee__inner {
+    height: 40vh;
+  }
+}
