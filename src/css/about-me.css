@@ -15,8 +15,8 @@
     text-transform: uppercase;
 }
 
-.red-span {
-    color: #ED3B44;
+.accent-color {
+    background-color: #ff7f08;
 }
 
 .grey-span {
@@ -72,6 +72,11 @@
     margin-bottom: 32px;
 }
 
+.swapper-of-skills {
+    display: flex;
+    justify-content: space-between;
+}
+
 .hard-skills {
     display: flex;
     flex-shrink: 0;
@@ -106,6 +111,11 @@
 
     .text-paddings {
         margin-bottom: 16px;
+    }
+
+    .skill-wrap {
+        width: 200px;
+        height: 200px;
     }
 }
 
