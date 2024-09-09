@@ -87,6 +87,7 @@ const swiper = new Swiper('.review-swiper', {
 =======
     reviewCardCover.insertAdjacentHTML('beforeend', reviewTemplate);
   });
+  console.log('hello');
 };
 
 renderReviewTemplate();
