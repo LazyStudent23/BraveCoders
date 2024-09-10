@@ -9,8 +9,6 @@
     transition: color .8s ease-in-out
 }
 
-
-
 .accordion-question {
     font-family: Inter Tight,sans-serif;
     font-weight: 600;
@@ -92,8 +90,15 @@
     color: #fff;
 }
 
-.btn-svg-opn:hover {
-    background-color: #2d2e30
+.btn-svg-opn:hover{
+    background-color: #ff7f08;
+    border: 1px solid rgba(255, 127, 8, 0.2);
+    outline: transparent;
+}
+.btn-svg-opn:focus{
+    background-color: #ff7f08;
+    border: 1px solid rgba(255, 127, 8, 0.2);
+    outline: transparent; 
 }
 
 .rotate {
@@ -132,12 +137,6 @@
 @media screen and (min-width: 1440px) {
     .border-right {
         border-right:rgba(250,250,250,.2) 1px solid
-    }
-
-    .section-faq-container {
-        max-width: 1440px;
-        width: 100%;
-        padding: 0
     }
 
     .accordion-item {
