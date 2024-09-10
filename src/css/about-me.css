@@ -37,8 +37,6 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 48px;
-    margin-top: 48px;
 }
 
 .scroll-sections-name {
