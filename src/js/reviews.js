@@ -46,14 +46,15 @@ renderReviewTemplate();
 
 const swiper = new Swiper('.review-swiper', {
   speed: 400,
+  spaceBetween: 100,
   modules: [Navigation, Keyboard],
   breakpoints: {
-    375: {
+    320: {
       slidesPerView: 1,
-      spaceBetween: 16,
     },
     768: {
       slidesPerView: 2,
+      spaceBetween: 16,
     },
     1440: {
       slidesPerView: 4,
