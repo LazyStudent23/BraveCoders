@@ -110,6 +110,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
 }
 
 .swiper-of-skills .hard-skills {
@@ -128,10 +129,6 @@
     align-items: center;
     flex-shrink: 0;
 }
-/* 
-.swiper-slide {
-    width: auto;
-} */
 
 .skill-name {
     font-weight: 400;
@@ -153,12 +150,12 @@
     bottom: 50%;
     right: 32px;
     width: auto;
-    color: transparent;
+    padding: 0;
 }
 
-/* #about-me .swiper-of-skills .skills-swiper-button-next::after {
-
-} */
+#about-me .swiper-of-skills .skills-swiper-button-next::after {
+    content: "";
+}
 
 
 @media screen and (min-width: 768px) {
