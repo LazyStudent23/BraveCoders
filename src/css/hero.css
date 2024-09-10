@@ -7,8 +7,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/hero-bg-mobile.png);
+  background-image: url(../img/hero-section/hero-bg-mobile.png);
   margin: 0 auto;
+}
+
+@media screen and (min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+  .hero-section{
+    background-image: url(../img/hero-section/hero-bg-mobile-2x.png);
+  }
 }
 
 .hero-wrap {
@@ -84,8 +91,15 @@
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    background-image: url(../img/hero-bg-tabl.png);
+    background-image: url(../img/hero-section/hero-bg-tabl.png);
   }
+
+    @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      .hero-section {
+        background-image: url(../img/hero-section/hero-bg-tabl-2x.png);
+      }
+    }
 
   .hero-title {
     font-size: 90px;
@@ -132,8 +146,15 @@
 
 @media screen and (min-width: 1440px) {
   .hero-section {
-    background-image: url(../img/hero-bg-desk.png);
+    background-image: url(../img/hero-section/hero-bg-desk.png);
   }
+
+    @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+      .hero-section {
+        background-image: url(../img/hero-section/hero-bg-desk-2x.png);
+      }
+    }
 
   .hero-title {
     max-width: 1084px;
