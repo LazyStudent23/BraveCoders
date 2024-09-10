@@ -1,46 +1,22 @@
-import Swiper from "swiper";
+import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Keyboard, Navigation } from 'swiper/modules';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-// Обработчик для аккордеона
-// document.querySelectorAll('.accordion-container').forEach(container => {
-//   container.addEventListener('click', function () {
-//     const panel = this.nextElementSibling;
-//     // Закрыть все панели кроме текущей
-//     document.querySelectorAll('.ac-panel').forEach(p => {
-//       if (p !== panel) {
-//         p.classList.remove('active');
-//         p.previousElementSibling.querySelector('svg').classList.remove('rotate');
-//       }
-//     });
 
-//     // Открыть/закрыть текущую панель
-//     panel.classList.toggle('active');
+const acc = new Accordion('.accordion-container', {
+  duration: 500,
+  elementClass: 'ac',
+  triggerClass: 'ac-trigger',
+  panelClass: 'ac-panel',
+  showMultiple: true,
+  openOnInit: [],
+});
 
-//     // Повернуть стрелку
-//     const svg = this.querySelector('svg');
-//     svg.classList.toggle('rotate');
-//   })
-// });
-  const scrollBtn = document.querySelector('.scroll-button');
+acc.open(0);
 
-  const acc = new Accordion('.scroll-to-read', {
-    duration: 500,
-    elementClass: 'scroll-accordion-item',
-    triggerClass: 'scroll-button',
-    panelClass: 'ac-panel',
-    showMultiple: true,
-    openOnInit: [],
-    // onclose: scrollBtn => {
-    //   scrollBtn.classList.toggle('rotate');
-    // },
-  });
-
-  acc.open(0);
-
-new Swiper('.swapper-of-skills', {
+new Swiper('.swiper-of-skills', {
   speed: 400,
   slidesPerView: 2,
   spaceBetween: 0,
