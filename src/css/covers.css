@@ -1,12 +1,4 @@
-body {
-  margin: 0;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 .section-paddings {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -15,6 +7,10 @@ body {
 .content {
   overflow: hidden;
   position: relative;
+}
+
+.covers-section {
+  margin-bottom: 64px; 
 }
 
 .marquee {
@@ -56,7 +52,7 @@ body {
 .marquee__line img {
   width: 100%;
   height: 100%;
-  /* object-fit: cover;  */
+  object-fit: cover; 
 }
 
 .marquee__line.animate {
@@ -72,17 +68,13 @@ body {
   }
 }
 
-.covers-section {
-  margin-bottom: 64px; 
-}
-
 /* Стили для планшетов */
 @media (min-width: 768px) and (max-width: 1439px) {
   .marquee__inner {
-    height: 960px; 
+    height: 220px; 
     top: 6858px; 
   }
-
+  
   .marquee__line {
     height: 314px; 
     top: 206px; 
