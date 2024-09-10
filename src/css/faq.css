@@ -91,14 +91,16 @@
 }
 
 .btn-svg-opn:hover{
-    background-color: #ff7f08;
+    background-color: #e88222;
     border: 1px solid rgba(255, 127, 8, 0.2);
     outline: transparent;
+    transition: #e88222 250ms linear;
 }
 .btn-svg-opn:focus{
-    background-color: #ff7f08;
+    background-color: #e88222;
     border: 1px solid rgba(255, 127, 8, 0.2);
     outline: transparent; 
+    transition: #e88222 250ms linear;
 }
 
 .rotate {
