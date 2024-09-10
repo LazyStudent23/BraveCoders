@@ -1,11 +1,7 @@
-body {
-  margin: 0;
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.section-paddings {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .content {
@@ -13,12 +9,15 @@ body {
   position: relative;
 }
 
+.covers-section {
+  margin-bottom: 64px; 
+}
+
 .marquee {
   background-image: url('../img/background-cover.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   left: 0;
   overflow: hidden;
@@ -26,17 +25,17 @@ body {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+  height: 508px;
 }
 
-.marquee__inner {
-  height: 220px; 
+.marquee__inner { 
+  margin-bottom: 40px;
   display: flex;
   transform: rotate(16deg);
 }
 
 .marquee__line {
   width: 282.29px; 
-  height: 162.94px; 
   flex-shrink: 0;
   margin-right: 40px;
   display: flex;
@@ -49,11 +48,10 @@ body {
   animation-iteration-count: infinite;
 }
 
-.marquee__line img {
+/* .marquee__line img {
   width: 100%;
-  height: 100%;
   object-fit: cover; 
-}
+} */
 
 .marquee__line.animate {
   animation: marqueeLine 5s ease-in-out infinite;
@@ -68,25 +66,21 @@ body {
   }
 }
 
-/* Отступы между секциями */
-.covers-section {
-  margin-bottom: 64px; 
-}
-
-/* Стили для планшетов и более крупных экранов */
-@media (min-width: 768px) {
-  .marquee__inner {
-    height: 570px;
+/* Стили для планшетов */
+@media (min-width: 768px)  {
+  .marquee {
+    height: 960px;
   }
-
+  
   .marquee__line {
-    margin-right: 40px;
+    width:544px; 
   }
 }
 
-/* Стили для крупных экранов */
-@media (min-width: 1440px) {
-  .marquee__inner {
-    height: 570px;
+
+/* @media (min-width: 1440px) {
+  .marquee {
+    height: 960px;
   }
-}
+  
+} */
