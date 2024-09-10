@@ -71,13 +71,14 @@
     justify-content: center;
     align-items: center;
     stroke: #fafafa;
+    fill: none;
 }
 
 #about-me .about-me-scroll-button::after {
     color: transparent;
 }
 
-.scroll-button .rotate {
+.scroll-button .rotate-icon {
     transform: rotate(180deg);
 }
 
@@ -108,15 +109,16 @@
 .swiper-of-skills {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .swiper-of-skills .hard-skills {
     display: flex;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     margin-bottom: 16px;
 }
 
-.hard-skills .skill-wrap {
+#about-me .hard-skills .skill-wrap {
     border-radius: 100%;
     width: 130px;
     height: 130px;
@@ -124,7 +126,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
+/* 
+.swiper-slide {
+    width: auto;
+} */
 
 .skill-name {
     font-weight: 400;
@@ -133,15 +140,25 @@
     letter-spacing: -0.02em;
 }
 
-.swiper-of-skills .skills-swiper-button-next {
+#about-me .swiper-of-skills .skills-swiper-button-next {
     border: none;
     background-color: transparent;
     stroke: #3B3B3B;
+    fill: transparent;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 50%;
+    right: 32px;
+    width: auto;
+    color: transparent;
 }
+
+/* #about-me .swiper-of-skills .skills-swiper-button-next::after {
+
+} */
 
 
 @media screen and (min-width: 768px) {
@@ -154,7 +171,7 @@
         margin-bottom: 16px;
     }
 
-    .hard-skills .skill-wrap {
+    #about-me .hard-skills .skill-wrap {
         width: 200px;
         height: 200px;
     }
