@@ -1,5 +1,18 @@
+body {
+  margin: 0;
+}
 
-/* Cтиль для мобильных устройств */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  overflow: hidden;
+  position: relative;
+}
+
 .marquee {
   background-image: url('../img/background-cover.jpg');
   background-size: cover; 
@@ -11,21 +24,19 @@
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px; 
   text-transform: uppercase;
 }
 
 .marquee__inner {
-  margin: 50px 0;
-  display: flex;
-  transform: rotate(16deg);
-  flex-wrap: wrap;
+   height: 90vh; 
+   display: flex;
+   transform: rotate(16deg); 
 }
 
 .marquee__line {
   flex-shrink: 0;
-  margin-right: 40px;
-  margin-top: 40px;
+  margin-right: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,37 +45,37 @@
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-play-state: paused;
 }
-
 .marquee__line.animate {
-  animation-play-state: running;
+  animation: marqueeLine 5s ease-in-out infinite;
 }
 
 @keyframes marqueeLine {
   from {
     transform: translateX(-20%);
   }
-
+  
   to {
     transform: translateX(-180%);
   }
 }
 
-/* (768px и выше) */
+/* Стили для планшетов и более крупных экранов */
 @media (min-width: 768px) {
-  .marquee {
-    font-size: 24px;
+  
+  .marquee__inner {
+    height: 570px; 
+  }
+
+  .marquee__line {
+    margin-right: 40px; 
   }
 }
 
-/* (1440px и выше) */
+/* Стили для крупных экранов */
 @media (min-width: 1440px) {
-  .marquee {
-    font-size: 34px;
-  }
 
   .marquee__inner {
-    height: 40vh;
+    height: 570px; 
   }
 }
