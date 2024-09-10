@@ -73,10 +73,8 @@
     stroke: #fafafa;
 }
 
-.scroll-to-read .scroll-header .ac #button:after {
-    content: " " !important;
-    color: transparent !important;
-    stroke: none !important;
+#about-me .about-me-scroll-button::after {
+    color: transparent;
 }
 
 .scroll-button .rotate {
