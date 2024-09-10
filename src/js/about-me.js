@@ -1,29 +1,26 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Keyboard, Navigation } from 'swiper/modules';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 
-const scrollContent = document.querySelector('.ac-panel');
-const scrollBtn = document.querySelector('.scroll-button');
-
-const acc = new Accordion('.scroll-to-read', {
+const acc = new Accordion('.accordion-container', {
   duration: 500,
-  elementClass: 'scroll-accordion-item',
-  triggerClass: 'scroll-button',
+  elementClass: 'ac',
+  triggerClass: 'ac-trigger',
   panelClass: 'ac-panel',
   showMultiple: true,
   openOnInit: [],
-  // onclose: scrollBtn => {
-  //   scrollBtn.classList.toggle('rotate');
-  // },
 });
 
 acc.open(0);
-acc.open(1);
-acc.open(2);
 
-new Swiper('.swapper-of-skills', {
+new Swiper('.swiper-of-skills', {
   speed: 400,
   slidesPerView: 2,
   spaceBetween: 0,
+  modules: [Keyboard, Navigation],
   grabCursor: true,
   loop: true,
   noSwipingSelector: '.skills-swiper-button-next',
