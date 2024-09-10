@@ -1,16 +1,14 @@
 /* MOBILE STYLES */
-
 .footer-section {
-  width: 375px;
-  height: 552px;
-  flex-shrink: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .footer-container {
   position: relative;
 }
 
-.glass-effect-wrapper {
+/* .glass-effect-wrapper {
   position: absolute;
   bottom: -50px;
   left: calc(50% + 70px);
@@ -27,7 +25,7 @@
   .glass-effect-wrapper {
     background-image: url('/img/footer/glass-effect@2x.png');
   }
-}
+} */
 
 /* FORM */
 
@@ -207,8 +205,8 @@ input:-webkit-autofill {
 
 @media screen and (min-width: 768px) {
   .footer-section {
-    width: 768px;
-    height: 636px;
+    padding-top: 88px;
+    padding-bottom: 169px;
   }
 
   .footer-form {
@@ -235,11 +233,11 @@ input:-webkit-autofill {
     display: flex;
     gap: 32px;
   }
-
+  /* 
   .email-field,
   .comment-field {
     width: 245px;
-  }
+  } */
 
   .form-button {
     width: 150px;
@@ -278,8 +276,12 @@ input:-webkit-autofill {
 
 @media screen and (min-width: 1280px) {
   .footer-section {
-    width: 1440px;
-    height: 636px;
+    padding-top: 80px;
+    padding-bottom: 196px;
+  }
+
+  .footer-container {
+    padding-left: 196px;
   }
 
   .footer-header {
@@ -290,10 +292,10 @@ input:-webkit-autofill {
     gap: 86px;
   }
 
-  .email-field,
+  /* .email-field,
   .comment-field {
     width: 390px;
-  }
+  } */
 
   .glass-effect-wrapper {
     left: calc(50% + 150px);

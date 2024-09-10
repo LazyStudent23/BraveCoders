@@ -33,14 +33,14 @@ const showModalWindow = () => {
 `);
     instance.show();
 
-    const elem = instance.element();
+    const domElem = instance.element();
 
     const onCloseBtnClick = event => {
         instance.close();
-        elem.querySelector('.js-modal-close-btn').removeEventListener('click', onCloseBtnClick);
+        domElem.querySelector('.js-modal-close-btn').removeEventListener('click', onCloseBtnClick);
     };
 
-    elem.querySelector('.js-modal-close-btn').addEventListener('click', onCloseBtnClick);
+    domElem.querySelector('.js-modal-close-btn').addEventListener('click', onCloseBtnClick);
 };
 
 const onInputField = () => {
