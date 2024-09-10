@@ -42,11 +42,8 @@
 }
 
 .swipe-button-container {
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 12px;
 }
 
@@ -80,7 +77,6 @@
   height: 52px;
 }
 
-
 /* ------------Tablet Styles Section ------------ */
 
 @media screen and (min-width: 768px) {
@@ -89,11 +85,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
-  }
-
-  .review-card-list {
-    gap: 16px;
   }
 }
 
