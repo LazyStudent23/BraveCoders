@@ -1,7 +1,3 @@
-.hero-container {
-  padding-left: 0;
-  padding-right: 0;
-}
 
 .hero-section {
   background-repeat: no-repeat;
@@ -19,7 +15,9 @@
 }
 
 .hero-wrap {
-  padding: 169px 2px 32px 16px;
+  padding-top: 169px;
+  padding-bottom: 32px;
+  
 }
 
 .hero-title {
@@ -64,6 +62,7 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   height: 37px;
+  display: block;
 }
 
 .link-ig {
@@ -109,12 +108,13 @@
   }
 
   .hero-wrap {
-    padding: 188px 22.5px 32px 178px;
+    padding-top: 188px;
+    padding-bottom: 32px;
   }
 
   .hero-contacts-link {
     line-height: 19px;
-    font-style: 16px;
+    font-size: 16px;
     height: 55px;
   }
 
@@ -162,6 +162,10 @@
   }
 
   .hero-contacts-link {
+  }
+
+  .hero-wrap{
+    padding-left: 146px;
   }
 
   
