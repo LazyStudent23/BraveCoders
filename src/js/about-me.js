@@ -24,18 +24,6 @@ new Swiper('.swiper-of-skills', {
   grabCursor: true,
   loop: true,
   noSwipingSelector: '.skills-swiper-button-next',
-  injectStyles: {
-    position: absolute,
-    width: '1px',
-    height: '1px',
-    margin: '-1px',
-    border: 0,
-    padding: 0,
-    whiteSpace: 'nowrap',
-    clipPath: 'inset(100%)',
-    clip: 'rect(0 0 0 0)',
-    overflow: 'hidden',
-  },
   breakpoints: {
     320: {
       slidesPerView: 2,
