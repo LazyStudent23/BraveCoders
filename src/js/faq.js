@@ -1,6 +1,6 @@
 const container = document.querySelector('.accordion-container');
 
-const accordion = new Accordion('.accordion', {
+const accordionExample = new Accordion('.accordion', {
   duration: 500,
   showMultiple: false,
   openOnInit: [],
