@@ -18,7 +18,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   left: 0;
   overflow: hidden;
@@ -26,17 +25,17 @@
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+  height: 508px;
 }
 
-.marquee__inner {
-  height: 220px; 
+.marquee__inner { 
+  margin-bottom: 40px;
   display: flex;
   transform: rotate(16deg);
 }
 
 .marquee__line {
   width: 282.29px; 
-  height: 162.94px; 
   flex-shrink: 0;
   margin-right: 40px;
   display: flex;
@@ -49,11 +48,10 @@
   animation-iteration-count: infinite;
 }
 
-.marquee__line img {
+/* .marquee__line img {
   width: 100%;
-  height: 100%;
   object-fit: cover; 
-}
+} */
 
 .marquee__line.animate {
   animation: marqueeLine 5s ease-in-out infinite;
@@ -69,19 +67,20 @@
 }
 
 /* Стили для планшетов */
-@media (min-width: 768px) and (max-width: 1439px) {
-  .marquee__inner {
-    height: 220px; 
-    top: 6858px; 
+@media (min-width: 768px)  {
+  .marquee {
+    height: 960px;
   }
   
   .marquee__line {
-    height: 314px; 
-    top: 206px; 
-    left: 181.8px; 
+    width:544px; 
   }
 }
 
-/* Стили для десктопов */
-@media (min-width: 1440px) {
-}
+
+/* @media (min-width: 1440px) {
+  .marquee {
+    height: 960px;
+  }
+  
+} */
