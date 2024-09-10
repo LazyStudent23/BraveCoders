@@ -16,6 +16,24 @@ const acc = new Accordion('.accordion-container', {
 
 acc.open(0);
 
+// ROTATE ICON SCROLL DOWN FUNCTION
+
+const scrollHeader = document.querySelectorAll('.scroll-header');
+const scrollBtn = document.querySelector('.scroll-button');
+
+function rotateIconWhenScroll() {
+  scrollHeader.forEach(scrollBtn => {
+    const ariaExpanded = scrollBtn.getAttribute('aria-expanded');
+    if (ariaExpanded === true) {
+      scrollBtn.classList.add('rotate-icon');
+    }
+    button.classList.add('rotate-icon');
+  });
+}
+scrollBtn.addEventListener('click', rotateIconWhenScroll);
+
+// SWIPER INICIALISATION
+
 new Swiper('.swiper-of-skills', {
   speed: 400,
   slidesPerView: 2,
