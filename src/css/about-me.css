@@ -162,6 +162,14 @@
     .text-wrapper {
         width: 704px;
         height: 700px;
+        padding: 64px;
+    }
+
+    .big-text-with-spans {
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
     }
 
     .text-paddings {
@@ -197,7 +205,7 @@
 
     .text-wrapper {
         width: 680px;
-        margin-bottom: 0;
+        margin-bottom: 0; 
     }
 
     .mans-picture {
