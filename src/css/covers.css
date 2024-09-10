@@ -64,11 +64,11 @@ body {
 @media (min-width: 768px) {
   
   .marquee__inner {
-    height: 570px; /* Уменьшаем высоту на планшетах */
+    height: 570px; 
   }
 
   .marquee__line {
-    margin-right: 40px; /* Увеличиваем отступы */
+    margin-right: 40px; 
   }
 }
 
@@ -76,6 +76,6 @@ body {
 @media (min-width: 1440px) {
 
   .marquee__inner {
-    height: 380px; /* Подгоняем высоту */
+    height: 570px; 
   }
 }
