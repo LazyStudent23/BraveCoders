@@ -1,5 +1,16 @@
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .content {
   overflow: hidden;
+  position: relative;
 }
 
 .marquee {
@@ -13,82 +24,58 @@
   overflow: hidden;
   font-family: 'Pridi', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px; 
   text-transform: uppercase;
 }
 
 .marquee__inner {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 столбцов */
-  grid-template-rows: repeat(2, auto);  /* 2 строки */
-  gap: 40px;  /* Расстояние между изображениями */
-  margin: 50px auto; /* Центрируем сетку */
-  max-width: 1200px; /* Ограничение ширины сетки */
-  transform: rotate(16deg); /* Сохранено вращение */
-  justify-items: center; /* Центрирование изображений по горизонтали */
+   height: 90vh; 
+   display: flex;
+   transform: rotate(16deg); 
 }
 
 .marquee__line {
+  flex-shrink: 0;
+  margin-right: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 282.29px; /* Адаптируем по ширине контейнера */
-  height: auto; /* Автоматическая высота */
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.marquee__line.animate {
+  animation: marqueeLine 5s ease-in-out infinite;
 }
 
-/* Анимации активируются только при наличии класса animate */
-
-/* Линия 1: Анимация для первой строки */
-.marquee__line:nth-child(-n+5).animate {
-  animation: moveFirstRow 12s linear infinite;
-}
-
-/* Линия 2: Анимация для второй строки */
-.marquee__line:nth-child(n+6):nth-child(-n+10).animate {
-  animation: moveSecondRow 10s linear infinite;
-  transform: translateX(50px); /* Смещение для шахматного порядка */
-}
-
-/* Анимация для первой строки */
-@keyframes moveFirstRow {
-  0% {
-    transform: translateX(0);
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
   }
-  100% {
-    transform: translateX(-100%);
+  
+  to {
+    transform: translateX(-180%);
   }
 }
 
-/* Анимация для второй строки */
-@keyframes moveSecondRow {
-  0% {
-    transform: translateX(50px); /* Начальное смещение */
-  }
-  100% {
-    transform: translateX(-150%); /* Быстрое движение */
-  }
-}
-
-/* Мобильные стили */
+/* Стили для планшетов и более крупных экранов */
 @media (min-width: 768px) {
-  .marquee {
-    font-size: 24px;
+  
+  .marquee__inner {
+    height: 570px; /* Уменьшаем высоту на планшетах */
   }
+
   .marquee__line {
-    width: 544px;
+    margin-right: 40px; /* Увеличиваем отступы */
   }
 }
 
 /* Стили для крупных экранов */
 @media (min-width: 1440px) {
-  .marquee {
-    font-size: 34px;
-  }
 
   .marquee__inner {
-    height: 40vh;
-  }
-  .marquee__line {
-    width: 544px;
+    height: 380px; /* Подгоняем высоту */
   }
 }
