@@ -29,7 +29,6 @@ html {
 }
 
 .burger-menu-btn {
-  display: flex;
   padding: 0;
   width: 28px;
   height: 28px;
@@ -160,10 +159,7 @@ html {
 .close-mobile-menu-btn {
   position: absolute;
   top: 32px;
-  right: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: 0;
   width: 28px;
   height: 28px;
   padding: 0;
