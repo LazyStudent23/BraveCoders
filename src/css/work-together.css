@@ -210,7 +210,7 @@ input:-webkit-autofill {
   }
 
   .bg-img {
-    background-position: calc(100% + 200px) 50px;
+    background-position: calc(100% + 630px) 130px;
   }
 
   .header-img-wrapper {
@@ -266,12 +266,8 @@ input:-webkit-autofill {
   }
 
   .bg-img {
-    background-position: calc(100% + 200px) 50px;
+    background-position: calc(100% + 450px) 60px;
     background-size: 728px 636px;
-  }
-
-  .footer-container {
-    padding-left: 196px;
   }
 
   .footer-header {
