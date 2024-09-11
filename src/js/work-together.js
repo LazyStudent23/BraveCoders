@@ -4,7 +4,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 import * as basicLightbox from 'basiclightbox';
-import 'basiclightbox/dist/basicLightbox.min.css'; 
+import 'basiclightbox/dist/basicLightbox.min.css';
 
 const footerFormEl = document.querySelector('.js-footer-form');
 const emailFieldEl = document.querySelector('.js-email-field');
@@ -14,15 +14,15 @@ const invalidEmailEl = document.querySelector('.js-invalid-email');
 
 axios.defaults.baseURL = "https://portfolio-js.b.goit.study/api";
 
-let emailValue; 
-let commentValue; 
+let emailValue;
+let commentValue;
 
 const showModalWindow = () => {
     const instance = basicLightbox.create(`
     <div class="form-modal">
-    <button class="modal-close-btn js-modal-close-btn" type="button">     
+    <button class="modal-close-btn js-modal-close-btn" type="button">
     <svg width="22" height="22">
-       <use href="/img/icons.svg#icon-cross"></use>
+       <use href="/img/icons.svg#icon-icon-cross"></use>
       </svg></button>
       <h3 class="modal-heading">Thank you for your interest in cooperation!</h3>
       <p class="modal-text">
@@ -50,11 +50,23 @@ const onInputField = () => {
     commentValue = commentFieldEl.value;
 
     if (emailValue.length > maxValueLength) {
-        emailFieldEl.value = emailValue.substring(0, maxValueLength) + "...";
+        if (!emailValue.endsWith('...')) {
+            emailFieldEl.value = emailValue.substring(0, maxValueLength) + "...";
+        };
+    } else {
+        if (emailValue.endsWith('...')) {
+            emailFieldEl.value = emailValue.substring(0, maxValueLength);
+        };
     };
-    
+
     if (commentValue.length > maxValueLength) {
-        commentFieldEl.value = commentValue.substring(0, maxValueLength) + "...";
+        if (!commentValue.endsWith('...')) {
+            commentFieldEl.value = commentValue.substring(0, maxValueLength) + "...";
+        };
+    } else {
+        if (commentValue.endsWith('...')) {
+            commentFieldEl.value = commentValue.substring(0, maxValueLength);
+        };
     };
 
     const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -82,7 +94,7 @@ const onFooterFormSubmit = async event => {
             comment: commentValue,
         });
 
-        emailFieldEl.style.borderBottom = "1px solid rgba(250, 250, 250, 0.1)";
+        emailFieldEl.style.borderBottom = "1px solid rgba(250, 250, 250, 0.2)";
         successEmailEl.classList.add('is-hidden');
         footerFormEl.reset();
         

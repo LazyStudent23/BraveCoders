@@ -4,28 +4,18 @@
   padding-bottom: 32px;
 }
 
-.footer-container {
-  position: relative;
-}
-
-/* .glass-effect-wrapper {
-  position: absolute;
-  bottom: -50px;
-  left: calc(50% + 70px);
-  width: 728px;
-  height: 679px;
+.bg-img {
   background-image: url('/img/footer/glass-effect.png');
-  background-size: cover;
-  background-position: right;
   background-repeat: no-repeat;
-  z-index: -100;
+  background-position: calc(100% + 630px) 50px;
+  background-size: 728px 552px;
 }
 
 @media screen and (min-resolution: 192dpi) {
-  .glass-effect-wrapper {
+  .bg-img {
     background-image: url('/img/footer/glass-effect@2x.png');
   }
-} */
+}
 
 /* FORM */
 
@@ -85,6 +75,7 @@ input:-webkit-autofill {
   background-color: transparent !important;
   color: #fafafa !important;
   border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   box-shadow: 0 0 0px 1000px transparent inset;
   -webkit-text-fill-color: #fafafa !important;
   transition: background-color 5000s ease-in-out 0s;
@@ -218,6 +209,10 @@ input:-webkit-autofill {
     letter-spacing: -1.2px;
   }
 
+  .bg-img {
+    background-position: calc(100% + 200px) 50px;
+  }
+
   .header-img-wrapper {
     column-gap: 20px;
     margin-bottom: 10px;
@@ -233,11 +228,6 @@ input:-webkit-autofill {
     display: flex;
     gap: 32px;
   }
-  /* 
-  .email-field,
-  .comment-field {
-    width: 245px;
-  } */
 
   .form-button {
     width: 150px;
@@ -245,11 +235,6 @@ input:-webkit-autofill {
     flex-shrink: 0;
     font-size: 16px;
     letter-spacing: -0.32px;
-  }
-
-  .glass-effect-wrapper {
-    bottom: -20px;
-    left: calc(50% + 150px);
   }
 
   .modal-text {
@@ -280,6 +265,11 @@ input:-webkit-autofill {
     padding-bottom: 196px;
   }
 
+  .bg-img {
+    background-position: calc(100% + 200px) 50px;
+    background-size: 728px 636px;
+  }
+
   .footer-container {
     padding-left: 196px;
   }
@@ -290,14 +280,5 @@ input:-webkit-autofill {
 
   .tablet-wrapper {
     gap: 86px;
-  }
-
-  /* .email-field,
-  .comment-field {
-    width: 390px;
-  } */
-
-  .glass-effect-wrapper {
-    left: calc(50% + 150px);
   }
 }
