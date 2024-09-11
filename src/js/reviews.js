@@ -55,11 +55,11 @@ renderReviewTemplate();
 
 const swiper = new Swiper('.review-swiper', {
   speed: 400,
-  effect: 'coverflow',
   modules: [Navigation, Keyboard, Mousewheel],
   breakpoints: {
     320: {
       slidesPerView: 1,
+      spaceBetween: 16,
     },
     768: {
       slidesPerView: 2,
