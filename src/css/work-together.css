@@ -49,7 +49,7 @@
 
 .email-field,
 .comment-field {
-  width: 343px;
+  width: 100%;
   height: 44px;
   background-color: transparent;
   border: none;
@@ -144,7 +144,7 @@ input:-webkit-autofill {
 }
 
 .address-item:hover {
-  border: 1px solid #fafafa;
+  border: 1px solid #ff7f08;
 }
 
 /* MODAL */
@@ -152,7 +152,7 @@ input:-webkit-autofill {
 .form-modal {
   display: inline-flex;
   gap: 16px;
-  padding: 64px;
+  padding: 64px 32px;
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
@@ -178,6 +178,7 @@ input:-webkit-autofill {
 }
 
 .modal-heading {
+  align-self: stretch;
   color: #fafafa;
   text-align: center;
   font-size: 20px;
@@ -186,6 +187,7 @@ input:-webkit-autofill {
 }
 
 .modal-text {
+  width: 279px;
   color: rgba(250, 250, 250, 0.6);
   text-align: center;
   font-size: 16px;
@@ -210,7 +212,7 @@ input:-webkit-autofill {
   }
 
   .bg-img {
-    background-position: calc(100% + 630px) 130px;
+    background-position: calc(100% + 690px) 130px;
   }
 
   .header-img-wrapper {
@@ -227,6 +229,10 @@ input:-webkit-autofill {
   .tablet-wrapper {
     display: flex;
     gap: 32px;
+  }
+
+  .form-modal {
+    padding: 64px;
   }
 
   .form-button {
@@ -260,9 +266,14 @@ input:-webkit-autofill {
 /* DESKTOP STYLES */
 
 @media screen and (min-width: 1280px) {
-  .footer-section {
-    padding-top: 80px;
-    padding-bottom: 196px;
+  .footer-container {
+    padding-left: 196px;
+  }
+
+  .email-field,
+  .comment-field {
+    width: 390px;
+    height: 44px;
   }
 
   .bg-img {
