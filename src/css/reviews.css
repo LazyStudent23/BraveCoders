@@ -1,10 +1,17 @@
 /* ------------Mobile Styles Section ------------ */
+.review {
+  margin-bottom: 164px;
+}
+
 .review-section {
   height: 100%;
 }
 
 .review-card-list {
   display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+  flex-wrap: nowrap;
 }
 
 .review-section-header {
@@ -23,6 +30,8 @@
   border-radius: 20px;
   padding: 32px 24px;
   height: 100%;
+  max-width: 344px;
+  min-height: 302px;
 }
 
 .review-card-avatar {
@@ -41,21 +50,27 @@
   height: 100%;
 }
 
-.swipe-button-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.swiper-container {
+.not-found-content {
+  font-weight: 500;
+  font-size: 30px;
+  color: #ff7f08;
   height: 100%;
 }
 
 .review-swiper {
-  display: flex;
+  position: relative;
+}
+
+.swipe-button-container {
+  position: absolute;
+}
+
+.swipe-button-container .swiper-button-prev {
+  left: 642px;
+}
+
+.swipe-button-container .swiper-button-next {
+  right: 642px;
 }
 
 .review-section {
@@ -63,12 +78,14 @@
   flex-direction: column;
 }
 
-.swipe-button-container {
-  display: flex;
-  gap: 16px;
+.slide-btn-icon {
+  fill: transparent;
+  width: 100%;
+  height: 100%;
 }
 
-.review-section .swiper-button-next:after {
+.review-section .swiper-button-prev:after {
+  content: '';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,20 +97,50 @@
   height: 52px;
 }
 
+.review-section .swiper-button-next:after {
+  content: '';
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  background-color: transparent;
+  border-radius: 60px;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+}
 
 /* ------------Tablet Styles Section ------------ */
 
 @media screen and (min-width: 768px) {
   .swipe-button-container {
     width: 100%;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 20px;
   }
 
   .review-card-list {
-    gap: 16px;
+    display: none;
+  }
+
+  .review-section .swiper-button-prev:after {
+    min-width: 68px;
+    height: 68px;
+  }
+
+  .review-section .swiper-button-next:after {
+    min-width: 68px;
+    height: 68px;
+  }
+
+  .swipe-button-container .swiper-button-prev {
+    top: 32px;
+    left: 274px;
+  }
+
+  .swipe-button-container .swiper-button-next {
+    top: 32px;
+    left: 362px;
   }
 }
 
@@ -103,5 +150,33 @@
   .review-section-card {
     width: 322px;
     height: 100%;
+  }
+
+  .review-section .swiper-button-prev:after {
+    min-width: 68px;
+    height: 68px;
+  }
+
+  .review-section .swiper-button-next:after {
+    min-width: 68px;
+    height: 68px;
+  }
+
+  .review-swiper {
+    position: relative;
+  }
+
+  .swipe-button-container {
+    position: absolute;
+  }
+
+  .swipe-button-container .swiper-button-prev {
+    top: 32px;
+    left: 610px;
+  }
+
+  .swipe-button-container .swiper-button-next {
+    top: 32px;
+    left: 698px;
   }
 }
