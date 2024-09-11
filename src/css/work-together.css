@@ -49,7 +49,7 @@
 
 .email-field,
 .comment-field {
-  width: 343px;
+  width: 100%;
   height: 44px;
   background-color: transparent;
   border: none;
@@ -196,7 +196,7 @@ input:-webkit-autofill {
 
 @media screen and (min-width: 768px) {
   .footer-section {
-    padding-top: 88px;
+    padding-top: 80px;
     padding-bottom: 169px;
   }
 
@@ -262,7 +262,8 @@ input:-webkit-autofill {
 @media screen and (min-width: 1280px) {
   .footer-section {
     padding-top: 80px;
-    padding-bottom: 196px;
+    padding-bottom: 169px;
+    padding-left: 164px;
   }
 
   .bg-img {
