@@ -1,11 +1,18 @@
 import { getReviews } from './portfolio-reviews-api.js';
 
+import iziToast from 'izitoast';
 import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Keyboard, Navigation } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const reviewCardList = document.querySelector('.review-card-list');
+
+const createErrorTemplateListEl = () => {
+  return `<li class="swiper-slide review-section-card">
+      <p class="not-found-content"> Not Found :(</p>
+    </li>`;
+};
 
 const createReviewTemplate = reviewInfo => {
   return `<li class="swiper-slide review-section-card">
@@ -33,12 +40,14 @@ const renderReviewTemplate = async () => {
     reviewCardList.insertAdjacentHTML('afterbegin', reviewsTemplate);
     swiper.update();
   } catch (error) {
-    // iziToast.error({
-    //   title: 'Error',
-    //   message:
-    //     'Sorry,there are no images matching your search query. Please try again!',
-    //   position: 'topRight',
-    // });
+    iziToast.error({
+      title: 'Info',
+      message:
+        'There was an error loading reviews. Please check your internet connection or try refreshing the page.',
+      position: 'topRight',
+    });
+    const errorTemplate = createErrorTemplateListEl();
+    reviewCardList.insertAdjacentHTML('afterbegin', errorTemplate);
   }
 };
 
@@ -46,22 +55,26 @@ renderReviewTemplate();
 
 const swiper = new Swiper('.review-swiper', {
   speed: 400,
-  spaceBetween: 200,
-  modules: [Navigation, Keyboard],
-  slidesPerView: 4,
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1,
-  //   },
-  //   768: {
-  //     slidesPerView: 2,
-  //   },
-  //   1440: {
-  //     slidesPerView: 4,
-  //   },
-  // },
+  effect: 'coverflow',
+  modules: [Navigation, Keyboard, Mousewheel],
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+  },
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
+  },
+  mousewheel: {
+    enabled: true,
   },
 });
