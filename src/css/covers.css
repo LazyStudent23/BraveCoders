@@ -9,10 +9,6 @@
   position: relative;
 }
 
-.covers-section {
-  margin-bottom: 64px; 
-}
-
 .marquee {
   background-image: url('../img/background-cover.jpg');
   background-size: cover;
