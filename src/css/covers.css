@@ -46,6 +46,7 @@
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  animation-play-state: paused; /* Изначально анимация остановлена */
 }
 
 /* .marquee__line img {
@@ -53,8 +54,11 @@
   object-fit: cover; 
 } */
 
-.marquee__line.animate {
+/* .marquee__line.animate {
   animation: marqueeLine 5s ease-in-out infinite;
+} */
+.marquee__line.animate {
+  animation-play-state: running; /* Запуск анимации, когда добавляется класс */
 }
 
 @keyframes marqueeLine {
