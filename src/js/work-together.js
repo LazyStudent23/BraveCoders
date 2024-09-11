@@ -22,7 +22,7 @@ const showModalWindow = () => {
     <div class="form-modal">
     <button class="modal-close-btn js-modal-close-btn" type="button">
     <svg width="22" height="22">
-       <use href="/img/icons.svg#icon-icon-cross"></use>
+    <use href="/BraveCoders/assets/icons-BSjufwsV.svg#icon-icon-cross"></use>
       </svg></button>
       <h3 class="modal-heading">Thank you for your interest in cooperation!</h3>
       <p class="modal-text">
@@ -38,9 +38,18 @@ const showModalWindow = () => {
     const onCloseBtnClick = event => {
         instance.close();
         domElem.querySelector('.js-modal-close-btn').removeEventListener('click', onCloseBtnClick);
+        document.removeEventListener('keydown', onKeyDown);
     };
 
+    const onKeyDown = event => {
+    if (event.key === 'Escape') {
+        instance.close();
+        document.removeEventListener('keydown', onKeyDown);
+        };
+};
+
     domElem.querySelector('.js-modal-close-btn').addEventListener('click', onCloseBtnClick);
+    document.addEventListener('keydown', onKeyDown);
 };
 
 const onInputField = () => {
