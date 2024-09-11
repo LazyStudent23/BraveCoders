@@ -42,6 +42,14 @@
     margin-top: 0;
 }
 
+.scroll-accordion-item.is-active .scroll-button-svg {
+    rotate: 180deg;
+}
+
+.scroll-button-svg {
+    transition: rotate 250ms linear;
+}
+
 .scroll-header {
     display: flex;
     align-items: center;
@@ -106,17 +114,20 @@
 
 /* =========== SWIPER =========== */
 
-.swiper-of-skills {
+.about-me-skills-container {
     display: flex;
     justify-content: space-between;
-    position: relative;
+    align-items: center;
+}
+
+.swiper-of-skills {
     overflow: hidden;
+    width: 260px;
 }
 
 .swiper-of-skills .hard-skills {
     display: flex;
-    /* flex-shrink: 0; */
-    margin-bottom: 16px;
+    flex-shrink: 0;
 }
 
 #about-me .hard-skills .skill-wrap {
@@ -137,23 +148,25 @@
     letter-spacing: -0.02em;
 }
 
-#about-me .swiper-of-skills .skills-swiper-button-next {
+/* #about-me .swiper-of-skills .skills-swiper-button-next {
     border: none;
     background-color: transparent;
     stroke: #3B3B3B;
     fill: transparent;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 50%;
-    right: 32px;
+} */
+
+#about-me .swiper-button-next {
+    position: static;
     width: auto;
     padding: 0;
+    border: none;
+    fill: transparent;
+    background-color: transparent;
+    stroke: #3B3B3B;
 }
 
-#about-me .swiper-of-skills .skills-swiper-button-next::after {
+#about-me .swiper-button-next::after {
     content: "";
 }
 
@@ -188,6 +201,10 @@
 
     .ac-panel-padding {
         margin-bottom: 32px;
+    }
+
+    .swiper-of-skills {
+        width: 600px;
     }
 
     .skill-name {
@@ -226,5 +243,14 @@
         height: 320px;
         margin-left: auto;
         margin-right: 100px;
+    }
+
+    .swiper-of-skills {
+        width: 1200px;
+        margin-left: 32px;
+    }
+
+    .about-me-skills-container {
+        padding-right: 32px;
     }
 }

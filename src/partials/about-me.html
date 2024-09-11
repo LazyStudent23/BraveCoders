@@ -25,7 +25,7 @@
                 <div class="scroll-header">
                     <p class="scroll-sections-name ac-header">ABOUT ME</p>
                     <button id="button" type="button" class="scroll-button ac-trigger about-me-scroll-button">
-                        <svg width="20" height="20">
+                        <svg class="scroll-button-svg" width="20" height="20">
                             <use href="./img/icons.svg#icon-arrow-down"></use>
                         </svg>
                     </button>
@@ -55,7 +55,7 @@
                 <div class="scroll-header">
                     <p class="scroll-sections-name ac-header">ROLE</p>
                     <button class="scroll-button ac-trigger about-me-scroll-button">
-                        <svg width="20" height="20">
+                        <svg class="scroll-button-svg" width="20" height="20">
                             <use href="./img/icons.svg#icon-arrow-down"></use>
                         </svg>
                     </button>
@@ -72,7 +72,7 @@
                 <div class="scroll-header">
                     <p class="scroll-sections-name ac-header">EDUCATION</p>
                     <button class="scroll-button ac-trigger about-me-scroll-button">
-                        <svg width="20" height="20">
+                        <svg class="scroll-button-svg" width="20" height="20">
                             <use href="./img/icons.svg#icon-arrow-down"></use>
                         </svg>
                     </button>
@@ -87,7 +87,8 @@
             </li>
         </ul>
             
-        <div class="swiper-of-skills">
+        <div class="about-me-skills-container">
+            <div class="swiper-of-skills">
                 <ul class="swiper-wrapper hard-skills">
                     <li class="swiper-slide skill-wrap">
                         <p class="skill-name">HTML/CSS</p>
@@ -111,11 +112,12 @@
                         <p class="skill-name">Vue.js</p>
                     </li>
                 </ul>
-                <button class="skills-swiper-button-next swiper-button-next">
-                    <svg width="28" height="28">
-                        <use href="./img/icons.svg#icon-arrow-narrow-right"></use>
-                    </svg>
-                </button>
+            </div>
+            <button class="skills-swiper-button-next swiper-button-next">
+                <svg width="28" height="28">
+                    <use href="./img/icons.svg#icon-arrow-narrow-right"></use>
+                </svg>
+            </button>
         </div>
     </div>
 </section>
