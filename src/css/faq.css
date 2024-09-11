@@ -20,7 +20,7 @@
 }
 
 .accordion-content {
-    transition-duration: 500ms;
+    transition-duration: 5ms;
     max-width: 289px;
     width: 100%
 }
@@ -91,16 +91,16 @@
 }
 
 .btn-svg-opn:hover{
-    background-color: #e88222;
-    border: 1px solid rgba(255, 127, 8, 0.2);
+
+    stroke: #ff7f08;
+    border: 1px solid rgba(255, 127, 8, 0.5);
     outline: transparent;
-    transition: #e88222 250ms linear;
 }
 .btn-svg-opn:focus{
-    background-color: #e88222;
-    border: 1px solid rgba(255, 127, 8, 0.2);
-    outline: transparent; 
-    transition: #e88222 250ms linear;
+
+    stroke: #ff7f08;
+    border: 1px solid rgba(255, 127, 8, 0.5);
+    outline: transparent;
 }
 
 .rotate {
@@ -110,7 +110,12 @@
 .btn-svg-opn svg {
     fill: none;
     stroke: #fafafa;
+    transition: stroke 250ms linear, border 250ms linear;
 
+}
+
+.btn-svg-opn:hover svg, .btn-svg-opn:focus svg{
+    stroke: #ff7f08;
 }
 
 
