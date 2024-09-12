@@ -86,11 +86,13 @@
 }
 
 .scroll-accordion-item.is-active .scroll-button-svg {
-    rotate: 180deg;
+    /* rotate: 180deg; */
+    transform: rotate(180deg)
 }
 
 #about-me .scroll-button-svg {
     transition: rotate 250ms linear, stroke 250ms linear;
+    /* transform: rotate(180deg) */
 }
 
 
