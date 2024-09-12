@@ -73,9 +73,10 @@
     transition: border 250ms linear;
 }
 
-.scroll-button:hover,
-.scroll-button:focus {
+#about-me .scroll-button:hover,
+#about-me .scroll-button:focus {
     border: 1px solid #ff7f08;
+    stroke: #ff7f08;
 }
 
 #about-me .about-me-scroll-button::after {
@@ -90,10 +91,6 @@
     transition: rotate 250ms linear, stroke 250ms linear;
 }
 
-#about-me .scroll-button-svg:hover,
-#about-me .scroll-button-svg:focus {
-    stroke: #ff7f08;
-}
 
 .list-of-elements {
     display: flex;

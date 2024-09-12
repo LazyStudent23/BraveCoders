@@ -90,18 +90,14 @@
     color: #fff;
 }
 
-.btn-svg-opn:hover{
+#faq .btn-svg-opn:hover, 
+#faq .btn-svg-opn:focus {
 
     stroke: #ff7f08;
     border: 1px solid rgba(255, 127, 8, 0.5);
     outline: transparent;
 }
-.btn-svg-opn:focus{
 
-    stroke: #ff7f08;
-    border: 1px solid rgba(255, 127, 8, 0.5);
-    outline: transparent;
-}
 
 .rotate {
     transform: rotate(180deg)

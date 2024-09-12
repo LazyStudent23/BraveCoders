@@ -3,7 +3,18 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
+.lloyd-form-img {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
+.footer-picture {
+  display: inline;
+}
+.test {
+  display: block;
+  font-size: 64px;
+}
 .bg-img {
   background-image: url('/img/footer/glass-effect.png');
   background-repeat: no-repeat;
@@ -24,6 +35,7 @@
 }
 
 .footer-header {
+  display: flex;
   font-size: 40px;
   line-height: 1;
   letter-spacing: -1.2px;
@@ -202,7 +214,11 @@ input:-webkit-autofill {
     padding-top: 80px;
     padding-bottom: 169px;
   }
-
+.lloyd-form-img {
+  width: 70px;
+  height: 70px;
+  max-width: unset;
+}
   .footer-form {
     margin-bottom: 78px;
   }
@@ -266,7 +282,7 @@ input:-webkit-autofill {
 
 /* DESKTOP STYLES */
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .footer-section {
     padding-top: 80px;
     padding-bottom: 169px;
