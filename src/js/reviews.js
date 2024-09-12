@@ -7,9 +7,6 @@ import 'swiper/css/navigation';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const reviewCardList = document.querySelector('.review-card-list');
-const slideNextAct = document.querySelector('.swiper-button-next');
-const slidePrevAct = document.querySelector('.swiper-button-prev');
-console.log(slideNextAct);
 
 const createErrorTemplateListEl = () => {
   return `<li class="swiper-slide review-section-card">
@@ -65,12 +62,6 @@ const renderReviewTemplate = async () => {
       },
     });
     swiper.update();
-
-    slideNextAct.addEventListener('click', () => {
-      console.log('next');
-      swiper.slideNext();
-    });
-    slidePrevAct.addEventListener('click', () => swiper.slidePrev());
   } catch (error) {
     iziToast.error({
       title: 'Info',
