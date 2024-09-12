@@ -87,7 +87,7 @@
 
 .scroll-accordion-item.is-active .scroll-button-svg {
     /* rotate: 180deg; */
-    transform: rotate(180deg)
+    transform: rotate(180deg);
 }
 
 #about-me .scroll-button-svg {
