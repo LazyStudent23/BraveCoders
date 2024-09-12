@@ -49,8 +49,11 @@
 /* .hero-contacts-item {
 } */
 
-.hero-contacts-link:hover {
-  border: 1px solid #fafafa;
+.hero-contacts-link:hover, .hero-contacts-link:focus {
+  
+  color: #ff7f08;
+    border: 1px solid rgba(255, 127, 8, 0.5);
+    outline: transparent;
 }
 
 .hero-contacts-link {
@@ -65,6 +68,8 @@
   border-radius: 60px;
   height: 37px;
   display: block;
+
+  transition: color 250ms linear, border 250ms linear;
 }
 
 .link-ig {
