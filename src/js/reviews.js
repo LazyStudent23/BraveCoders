@@ -7,6 +7,9 @@ import 'swiper/css/navigation';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const reviewCardList = document.querySelector('.review-card-list');
+const slideNextAct = document.querySelector('.swiper-button-next');
+const slidePrevAct = document.querySelector('.swiper-button-prev');
+console.log(slideNextAct);
 
 const createErrorTemplateListEl = () => {
   return `<li class="swiper-slide review-section-card">
@@ -38,7 +41,36 @@ const renderReviewTemplate = async () => {
       .join('');
 
     reviewCardList.insertAdjacentHTML('afterbegin', reviewsTemplate);
+    const swiper = new Swiper('.review-swiper', {
+      speed: 400,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      modules: [Navigation, Keyboard, Mousewheel],
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+      mousewheel: {
+        enabled: true,
+      },
+    });
     swiper.update();
+
+    slideNextAct.addEventListener('click', () => {
+      console.log('next');
+      swiper.slideNext();
+    });
+    slidePrevAct.addEventListener('click', () => swiper.slidePrev());
   } catch (error) {
     iziToast.error({
       title: 'Info',
@@ -52,29 +84,3 @@ const renderReviewTemplate = async () => {
 };
 
 renderReviewTemplate();
-
-const swiper = new Swiper('.review-swiper', {
-  speed: 400,
-  modules: [Navigation, Keyboard, Mousewheel],
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 16,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 16,
-    },
-    1440: {
-      slidesPerView: 4,
-      spaceBetween: 16,
-    },
-  },
-  navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next',
-  },
-  mousewheel: {
-    enabled: true,
-  },
-});

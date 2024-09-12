@@ -1,16 +1,15 @@
 /* ------------Mobile Styles Section ------------ */
-.review {
-  margin-bottom: 164px;
-}
 
-.review-section {
+.review-swiper {
+  position: relative;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .review-card-list {
-  display: flex;
   align-items: center;
-  padding-bottom: 32px;
+  padding-bottom: 64px;
   flex-wrap: nowrap;
 }
 
@@ -19,18 +18,17 @@
   font-size: 16px;
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
-  margin-top: 64px;
   margin-bottom: 32px;
 }
 
 .swiper-slide {
   display: flex;
-  max-width: 295px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   padding: 32px 24px;
   height: 100%;
   max-width: 344px;
+
   min-height: 302px;
 }
 
@@ -57,21 +55,17 @@
   height: 100%;
 }
 
-.review-swiper {
-  position: relative;
-}
-
 .swipe-button-container {
   position: absolute;
 }
 
 .swipe-button-container .swiper-button-prev {
-  top: 32px;
+  top: 400px;
   left: 114px;
 }
 
 .swipe-button-container .swiper-button-next {
-  top: 32px;
+  top: 400px;
   left: 178px;
 }
 
@@ -116,15 +110,6 @@
 /* ------------Tablet Styles Section ------------ */
 
 @media screen and (min-width: 768px) {
-  .swipe-button-container {
-    width: 100%;
-    flex-direction: row;
-  }
-
-  .review-card-list {
-    display: none;
-  }
-
   .review-section .swiper-button-prev:after {
     min-width: 68px;
     height: 68px;
