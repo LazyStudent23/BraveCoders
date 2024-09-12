@@ -3,22 +3,21 @@
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .lloyd-form-img {
   display: inline-block;
   width: 44px;
   height: 44px;
 }
+
 .footer-picture {
   display: inline;
 }
-.test {
-  display: block;
-  font-size: 64px;
-}
+
 .bg-img {
   background-image: url('/img/footer/glass-effect.png');
   background-repeat: no-repeat;
-  background-position: calc(100% + 630px) 50px;
+  background-position: calc(100% + 630px) 30px;
   background-size: 728px 552px;
 }
 
@@ -35,7 +34,6 @@
 }
 
 .footer-header {
-  display: flex;
   font-size: 40px;
   line-height: 1;
   letter-spacing: -1.2px;
@@ -214,11 +212,11 @@ input:-webkit-autofill {
     padding-top: 80px;
     padding-bottom: 169px;
   }
-.lloyd-form-img {
-  width: 70px;
-  height: 70px;
-  max-width: unset;
-}
+  .lloyd-form-img {
+    width: 70px;
+    height: 70px;
+    max-width: unset;
+  }
   .footer-form {
     margin-bottom: 78px;
   }
@@ -229,7 +227,7 @@ input:-webkit-autofill {
   }
 
   .bg-img {
-    background-position: calc(100% + 690px) 130px;
+    background-position: calc(50% + 486px) 60px;
   }
 
   .header-img-wrapper {
@@ -288,13 +286,13 @@ input:-webkit-autofill {
     padding-bottom: 169px;
     padding-left: 164px;
   }
-    .email-field,
-    .comment-field {
-      width: 390px;
-      height: 44px;
-    }
+  .email-field,
+  .comment-field {
+    width: 390px;
+    height: 44px;
+  }
   .bg-img {
-    background-position: calc(100% + 450px) 60px;
+    background-position: calc(50% + 660px) 40px;
     background-size: 728px 636px;
   }
 
