@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/hero-section/hero-bg-mobile.png);
+  background-image: url(/img/hero-section/hero-bg-mobile.png);
   margin: 0 auto;
   padding-top: 281px;
   padding-bottom: 32px;
@@ -12,7 +12,7 @@
 @media screen and (min-resolution: 2dppx),
 (min-resolution: 192dpi) {
   .hero-section{
-    background-image: url(../img/hero-section/hero-bg-mobile-2x.png);
+    background-image: url(/img/hero-section/hero-bg-mobile-2x.png);
   }
 }
 
