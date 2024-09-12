@@ -7,6 +7,8 @@ import 'swiper/css/navigation';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 
 const reviewCardList = document.querySelector('.review-card-list');
+const swipeButtonsArr = document.querySelectorAll('.review-slide-btn');
+console.log(swipeButtonsArr);
 
 const createErrorTemplateListEl = () => {
   return `<li class="swiper-slide review-section-card">
@@ -63,12 +65,16 @@ const renderReviewTemplate = async () => {
     });
     swiper.update();
   } catch (error) {
+    swipeButtonsArr.forEach(element => {
+      element.classList.add('visually-hidden');
+    });
     iziToast.error({
       title: 'Info',
       message:
         'There was an error loading reviews. Please check your internet connection or try refreshing the page.',
       position: 'topRight',
     });
+
     const errorTemplate = createErrorTemplateListEl();
     reviewCardList.insertAdjacentHTML('afterbegin', errorTemplate);
   }
