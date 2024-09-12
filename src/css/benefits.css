@@ -3,9 +3,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-}
-
-.section-paddings {
   @media screen and (min-width: 768px) {
     padding-top: 48px;
     padding-bottom: 48px;
