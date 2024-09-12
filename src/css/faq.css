@@ -66,18 +66,18 @@
 }
 
 .accordion-content {
+    transition-duration: 0.8s; 
     max-height: 0;
     opacity: 0;
-    transition: max-height 1.5s ease-in-out,opacity 1.5s ease-in-out;
     overflow: hidden;
     max-width: 343px;
-    width: 100%
-}
-
-.accordion-item.is-active .accordion-content {
-    max-height: 500px;
-    opacity: 1
-}
+    width: 100%;
+  }
+  
+  .accordion-item.is-active .accordion-content {
+    max-height: 500px; 
+    opacity: 1;
+  }
 
 .accordion-question {
     font-size: 20px;

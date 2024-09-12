@@ -4,13 +4,16 @@ import 'accordion-js/dist/accordion.min.css';
 const container = document.querySelector('.accordion-container');
 
 const accordionExample = new Accordion('.accordion', {
-  duration: 800,  
-  showMultiple: false,  
-  openOnInit: [],  
-  elementClass: 'accordion-item',  
-  triggerClass: 'btn-svg-opn',  
+  duration: 800, 
+  showMultiple: false,
+  openOnInit: [],
+  elementClass: 'accordion-item',
+  triggerClass: 'btn-svg-opn',
   panelClass: 'accordion-content',
   easing: 'ease-in-out',
+  onBeforeClose: function(el) {
+    el.style.maxHeight = el.scrollHeight + 'px'; 
+  },
 });
 
 const faqButtons = document.querySelectorAll('.btn-svg-opn');
