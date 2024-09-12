@@ -1177,34 +1177,38 @@
             height="44"
           />
         </picture>
-        <h2 class="footer-header">
-          LET'S <span class="accent">WORK</span>
-        </h2>
+        <h2 class="footer-header">LET'S <span class="accent">WORK</span></h2>
       </div>
-    <h2 class="footer-header">TOGETHER</h2>
-    <div class="tablet-wrapper"><div class="form-wrapper">
-        <label>
-          <input
-            class="email-field js-email-field"
-            type="email"
-            name="userEmail"
-            required
-            pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-            placeholder="clients@gmail.com"
-          />
-          <p class="success-email js-success-email is-hidden">Succes!</p>
-          <p class="invalid-email js-invalid-email is-hidden">Invalid email, try again</p>
-        </label>  
-        <label>
-          <input
-            class="comment-field js-comment-field"
-            name="userComment"
-            required
-            placeholder="comments"
-          ></input>
-        </label>
+      <h2 class="footer-header">TOGETHER</h2>
+      <div class="tablet-wrapper">
+        <div class="form-wrapper">
+          <label>
+            <input
+              class="email-field js-email-field"
+              type="email"
+              name="userEmail"
+              required
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              placeholder="clients@gmail.com"
+            />
+            <span class="success-email js-success-email is-hidden"
+              >Succes!</span
+            >
+            <span class="invalid-email js-invalid-email is-hidden"
+              >Invalid email, try again</span
+            >
+          </label>
+          <label>
+            <input
+              class="comment-field js-comment-field"
+              name="userComment"
+              required
+              placeholder="comments"
+            />
+          </label>
+        </div>
+        <button class="form-button js-form-button" type="submit">Send</button>
       </div>
-      <button class="form-button js-form-button" type="submit">Send</button></div>
     </form>
     <address class="footer-address"></address>
     <ul class="footer-address-list">
@@ -1219,8 +1223,6 @@
     </ul>
   </div>
 </footer>
-
-
 
   </body>
 </html>
