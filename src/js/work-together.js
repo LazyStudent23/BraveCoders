@@ -20,17 +20,29 @@ let commentValue;
 const showModalWindow = () => {
     const instance = basicLightbox.create(`
     <div class="form-modal">
-    <button class="modal-close-btn js-modal-close-btn" type="button">
-    <svg width="22" height="22">
-    <use href="/BraveCoders/assets/icons-BSjufwsV.svg#icon-icon-cross"></use>
-      </svg></button>
+      <button class="modal-close-btn js-modal-close-btn" type="button">
+        <svg width="22" height="22">
+          <use href="/BraveCoders/assets/icons-BSjufwsV.svg#icon-icon-cross"></use>
+        </svg>
+      </button>
       <h3 class="modal-heading">Thank you for your interest in cooperation!</h3>
       <p class="modal-text">
         The manager will contact you shortly to discuss further details and
         opportunities for cooperation. Please stay in touch.
       </p>
     </div>
-`);
+  `, {
+
+    onShow: (instance) => {
+      const modalElement = instance.element();
+      modalElement.addEventListener('click', onBackdropClick);
+    },
+    onClose: (instance) => {
+      const modalElement = instance.element();
+      modalElement.removeEventListener('click', onBackdropClick);
+    }
+  });
+
     instance.show();
 
     const domElem = instance.element();
@@ -42,11 +54,18 @@ const showModalWindow = () => {
     };
 
     const onKeyDown = event => {
-    if (event.key === 'Escape') {
-        instance.close();
-        document.removeEventListener('keydown', onKeyDown);
-        };
-};
+        if (event.key === 'Escape') {
+            instance.close();
+            document.removeEventListener('keydown', onKeyDown);
+        }
+    };
+
+    const onBackdropClick = event => {
+        if (event.target === domElem) {
+            instance.close();
+            document.removeEventListener('keydown', onKeyDown);
+        }
+    };
 
     domElem.querySelector('.js-modal-close-btn').addEventListener('click', onCloseBtnClick);
     document.addEventListener('keydown', onKeyDown);
