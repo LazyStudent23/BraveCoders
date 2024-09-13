@@ -55,10 +55,12 @@ const renderReviewTemplate = async () => {
           spaceBetween: 16,
         },
       },
+      on: { keyPress: onMyKeyPress },
       navigation: {
         prevEl: '.swiper-button-prev',
         nextEl: '.swiper-button-next',
       },
+      keyboard: { enabled: true, onlyInViewport: true },
       mousewheel: {
         enabled: true,
       },
@@ -81,3 +83,14 @@ const renderReviewTemplate = async () => {
 };
 
 renderReviewTemplate();
+
+function onMyKeyPress(swiper, keyCode) {
+  switch (keyCode) {
+    case 9: //Tab
+      swiper.slideNext();
+      break;
+    case 8: //Backspace
+      swiper.slidePrev();
+      break;
+  }
+}
