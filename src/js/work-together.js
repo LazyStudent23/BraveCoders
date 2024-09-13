@@ -18,15 +18,7 @@ let emailValue;
 let commentValue;
 
 const showModalWindow = () => {
-
-    const onBackdropClick = event => {
-        const domElem = instance.element();
-        if (event.target === domElem) {
-            instance.close();
-            document.removeEventListener('keydown', onKeyDown);
-        }
-    };
-
+    let onBackdropClick;
     const instance = basicLightbox.create(`
     <div class="form-modal">
       <button class="modal-close-btn js-modal-close-btn" type="button">
@@ -41,14 +33,22 @@ const showModalWindow = () => {
       </p>
     </div>
   `, {
-
     onShow: (instance) => {
       const modalElement = instance.element();
+
+      onBackdropClick = event => {
+        if (event.target === modalElement) {
+            instance.close();
+            document.removeEventListener('keydown', onKeyDown);
+            modalElement.removeEventListener('click', onBackdropClick);
+        }
+      };
+
       modalElement.addEventListener('click', onBackdropClick);
     },
     onClose: (instance) => {
       const modalElement = instance.element();
-      modalElement.removeEventListener('click', onBackdropClick);
+      modalElement.removeEventListener('click', onBackdropClick); 
     }
   });
 
@@ -60,12 +60,14 @@ const showModalWindow = () => {
         instance.close();
         domElem.querySelector('.js-modal-close-btn').removeEventListener('click', onCloseBtnClick);
         document.removeEventListener('keydown', onKeyDown);
+        domElem.removeEventListener('click', onBackdropClick); 
     };
 
     const onKeyDown = event => {
         if (event.key === 'Escape') {
             instance.close();
             document.removeEventListener('keydown', onKeyDown);
+            domElem.removeEventListener('click', onBackdropClick); 
         }
     };
 
