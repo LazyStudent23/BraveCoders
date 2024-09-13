@@ -18,6 +18,15 @@ let emailValue;
 let commentValue;
 
 const showModalWindow = () => {
+
+    const onBackdropClick = event => {
+        const domElem = instance.element();
+        if (event.target === domElem) {
+            instance.close();
+            document.removeEventListener('keydown', onKeyDown);
+        }
+    };
+
     const instance = basicLightbox.create(`
     <div class="form-modal">
       <button class="modal-close-btn js-modal-close-btn" type="button">
@@ -55,13 +64,6 @@ const showModalWindow = () => {
 
     const onKeyDown = event => {
         if (event.key === 'Escape') {
-            instance.close();
-            document.removeEventListener('keydown', onKeyDown);
-        }
-    };
-
-    const onBackdropClick = event => {
-        if (event.target === domElem) {
             instance.close();
             document.removeEventListener('keydown', onKeyDown);
         }
