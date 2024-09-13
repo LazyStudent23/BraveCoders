@@ -282,15 +282,15 @@ input:-webkit-autofill {
 
 @media screen and (min-width: 1440px) {
   .footer-section {
-    padding-top: 80px;
-    padding-bottom: 169px;
-    padding-left: 164px;
+    padding-left: 196px;
   }
+
   .email-field,
   .comment-field {
     width: 390px;
     height: 44px;
   }
+
   .bg-img {
     background-position: calc(50% + 660px) 40px;
     background-size: 728px 636px;
