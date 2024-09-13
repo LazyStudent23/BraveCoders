@@ -60,13 +60,13 @@
 }
 
 .swipe-button-container .swiper-button-prev {
-  top: -25px;
-  left: 94px;
+  top: -36px;
+  left: 115px;
 }
 
 .swipe-button-container .swiper-button-next {
-  top: -25px;
-  left: 174px;
+  top: -36px;
+  left: 180px;
 }
 
 .review-section {
@@ -96,8 +96,8 @@
   background-color: transparent;
   border-radius: 60px;
   padding: 14px;
-  min-width: 68px;
-  min-height: 68px;
+  min-width: 54px;
+  min-height: 54px;
   transition: border 250ms linear;
 }
 
@@ -120,18 +120,14 @@
     width: 322px;
     min-height: 302px;
   }
-  .review-section .swiper-button-prev:after {
-    min-width: 68px;
-    height: 68px;
-  }
 
   .review-card-list {
     padding-bottom: 100px;
   }
 
-  .review-section .swiper-button-next:after {
+  .review-slide-btn {
     min-width: 68px;
-    height: 68px;
+    min-height: 68px;
   }
 
   .swipe-button-container .swiper-button-prev {
@@ -150,16 +146,6 @@
 @media screen and (min-width: 1440px) {
   .review-section-card {
     min-height: 302px;
-  }
-
-  .review-section .swiper-button-prev:after {
-    min-width: 68px;
-    height: 68px;
-  }
-
-  .review-section .swiper-button-next:after {
-    min-width: 68px;
-    height: 68px;
   }
 
   .review-swiper {
